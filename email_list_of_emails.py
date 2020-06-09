@@ -6,16 +6,10 @@ from email.mime.multipart import MIMEMultipart
 sender_email = "your_email@gmail.com"
 password = "your_password"
 
-def send_email(name, receiver_email):
-    message = MIMEMultipart("alternative")
-    message["Subject"] = "your_subject"
-    message["From"] = sender_email
-    message["To"] = receiver_email
-
-    text = """\
+text = """\
     your_message
     """
-    html = """\
+html = """\
     <html>
       <body>
         <p>
@@ -24,6 +18,12 @@ def send_email(name, receiver_email):
       </body>
     </html>
     """
+
+def send_email(name, receiver_email):
+    message = MIMEMultipart("alternative")
+    message["Subject"] = "your_subject"
+    message["From"] = sender_email
+    message["To"] = receiver_email
 
     part1 = MIMEText(text, "plain")
     part2 = MIMEText(html, "html")
