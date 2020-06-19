@@ -1,4 +1,4 @@
-# Email_Scripts
+# Email_Script
 Python scripts to email a list of emails (Summer 2020).
 
 ## Run Instructions
